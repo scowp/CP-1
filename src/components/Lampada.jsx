@@ -7,9 +7,9 @@ export default function Lampada(){
     const [imagem, setImagem] = useState(imagem_desligado)
 
     return(
-        <div>
-            <img src={imagem}/>
-            <button onClick={()=>imagem == imagem_desligado ? setImagem(imagem_ligado): setImagem(imagem_desligado)}>Switch</button>
+        <div className="d-flex flex-column align-items-center">
+            <img width="150px" src={imagem}/>
+            <button className="btn btn-primary mt-4" onClick={()=>imagem == imagem_desligado ? setImagem(imagem_ligado): setImagem(imagem_desligado)}>Switch</button>
         </div>
     )
 }
